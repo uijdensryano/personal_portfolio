@@ -1,0 +1,24 @@
+---
+const year = new Date().getFullYear;
+const astro_version = Astro.generator;
+---
+
+<footer>
+    <div>
+        <div><img src="/favicon.svg" alt="Astro Logo"></div>
+        <img src="/favicon.svg" alt="Astro Logo">
+        <p>{astro_version}</p>
+    </div>
+    <div></div>
+    <div></div>
+</footer>
+
+<style>
+    footer{
+        display: flex;
+    }
+
+    image{
+        background-color: black;
+    }
+</style>
