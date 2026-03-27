@@ -1,24 +1,53 @@
 ---
-const year = new Date().getFullYear;
+import { name, github } from '@/config.js'; // @ is equal to the src directory
+
+const year = new Date().getFullYear();
 const astro_version = Astro.generator;
 ---
 
 <footer>
-    <div>
-        <div><img src="/favicon.svg" alt="Astro Logo"></div>
+    <div class="astro">
         <img src="/favicon.svg" alt="Astro Logo">
         <p>{astro_version}</p>
     </div>
-    <div></div>
-    <div></div>
+    <div class="copyright">
+        <p>© {year} {name}. All rights reserved.</p>
+    </div>
+    <div class="socials">
+        <p><a href={github} target="_blank"><i class="fa-brands fa-github"></i></a></p>
+    </div>
 </footer>
 
 <style>
     footer{
         display: flex;
+        flex-grow: 1;
+
+        div{
+            flex: 1;
+
+            display: flex;
+            align-items: end;
+        }
     }
 
-    image{
+    .astro{
+        text-align: left;
+        gap: 1rem;
+    }
+
+    .copyright{
+        text-align: center;
+    }
+
+    .socials{
+        -ms-flex-align: end;
+    }
+
+    img{
         background-color: black;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
     }
 </style>
