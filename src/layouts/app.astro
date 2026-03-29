@@ -15,7 +15,9 @@ import Footer from "../pages/components/footer.astro"
 	<body>
         <main>
             <Navbar></Navbar>
-            <slot></slot>
+            <div class="content-container">
+                <slot></slot>
+            </div>
         </main>
 
         <Footer></Footer>
@@ -42,8 +44,6 @@ import Footer from "../pages/components/footer.astro"
     }
 
     main{
-        border: gray solid 1px;
-
         flex: 1;
         padding: 1rem;
         text-align: center;
@@ -54,5 +54,11 @@ import Footer from "../pages/components/footer.astro"
             padding: 0;
             max-width: 60%;
         }
+    }
+
+    .content-container{
+        border: gray solid 1px;
+
+        padding: 0 1rem;
     }
 </style>
