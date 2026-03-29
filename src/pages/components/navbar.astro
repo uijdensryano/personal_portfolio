@@ -1,16 +1,31 @@
 <nav>
-    <div><a href="/src/pages/index">Home</a></div>
-    <div><a href="/src/pages/about-me">About me</a></div>
-    <div><a href="/src/pages/projects">Projects</a></div>
+    <div><a href="/">Home</a></div>
+    <div><a href="/about-me">About me</a></div>
+    <div><a href="/projects">Projects</a></div>
 </nav>
 
 <style>
     nav{
         display: flex;
-        padding-top: 1rem;
+        flex-direction: column;
+        padding: 1rem 0;
+        background-color: #8458B3;
 
-        div{
-            flex: 1;
+        @media (min-width: 600px){
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+            div{
+                flex: 1;
+            }
         }
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 0.8rem;
+        font-weight: bold;
     }
 </style>

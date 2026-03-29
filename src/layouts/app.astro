@@ -13,27 +13,46 @@ import Footer from "../pages/components/footer.astro"
 		<title>Ryano Uijdens</title>
 	</head>
 	<body>
-        <Navbar></Navbar>
         <main>
+            <Navbar></Navbar>
             <slot></slot>
         </main>
+
         <Footer></Footer>
 	</body>
 </html>
 
 <style>
     body{
+        /* Throughout the css styling and behavior stuff will be seperate when a selector has enough properties
+        to increase readability. */
         font-family: "Comfortaa", "Nunito", sans-serif;
+        background-color: #e5eaf5;
+        font-size: 1.1rem;
 
         display: flex;
         flex-direction: column;
-        text-align: center;
-        max-width: 60%;
         min-height: 100vh;
         margin: 0 auto;
+        max-width: 100%;
+
+        @media (min-width: 768px){
+            font-size: 1rem;
+        }
     }
 
     main{
+        border: gray solid 1px;
+
         flex: 1;
+        padding: 1rem;
+        text-align: center;
+        width: 100%;
+        margin: 1rem auto;
+
+        @media (min-width: 768px){
+            padding: 0;
+            max-width: 60%;
+        }
     }
 </style>
